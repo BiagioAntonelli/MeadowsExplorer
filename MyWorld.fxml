@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WorldController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="407.0" fitWidth="465.0" layoutX="-2.0" layoutY="-43.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-74.0" AnchorPane.topAnchor="-43.0" />
+      <Pane layoutX="-1.0" layoutY="292.0" prefHeight="68.0" prefWidth="495.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-6.0">
+         <children>
+            <ImageView fx:id="myItemView" fitHeight="60.0" fitWidth="60.0" layoutX="289.0" onMousePressed="#putItem" pickOnBounds="true" preserveRatio="true" />
+            <Polygon fx:id="leftPol" fill="#082e51" layoutX="117.0" layoutY="37.0" onMousePressed="#lookRight" opacity="0.9" rotate="90.0" scaleX="0.5" scaleY="0.4" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Polygon fx:id="rightPol" fill="#082e51" layoutX="59.0" layoutY="37.0" onMousePressed="#lookLeft" opacity="0.9" rotate="-90.0" scaleX="0.5" scaleY="0.4" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Polygon fx:id="nextPol" fill="#862a2a" layoutX="173.0" layoutY="37.0" onMousePressed="#goNext" opacity="0.9" scaleX="0.5" scaleY="0.5" stroke="#4d4242" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Polygon fx:id="worldItemButton" fill="#4d4b45" layoutX="367.0" layoutY="40.0" onMousePressed="#scrollWorldItems" opacity="0.91" rotate="90.0" scaleX="0.6" scaleY="0.2" stroke="#868484" strokeLineJoin="BEVEL">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#28333c" height="7.0" layoutX="-3.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
+         </children>
+      </Pane>
+      <MenuBar layoutY="-4.0" prefHeight="26.0" prefWidth="385.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Location Info">
+            <items>
+              <MenuItem fx:id="menuLocName" mnemonicParsing="false" text="locname" />
+                  <MenuItem fx:id="menuLocDir" mnemonicParsing="false" text="dir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="help">
+              <items>
+                <MenuItem fx:id="restart" mnemonicParsing="false" onAction="#restartApp" text="restart" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="itemView" fitHeight="99.0" fitWidth="92.0" layoutX="251.0" layoutY="26.0" onMousePressed="#pickItem" opacity="0.8" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="46.0" />
+      <Polygon fx:id="viewItemButton" fill="#4d4b45" layoutX="365.0" layoutY="94.0" onMousePressed="#scrollViewItems" opacity="0.8" rotate="90.0" scaleX="0.8" scaleY="0.2" stroke="#868484" strokeLineJoin="BEVEL">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#28333c" height="7.0" layoutX="-3.0" layoutY="359.0" stroke="BLACK" strokeType="INSIDE" width="396.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="359.0" />
+   </children>
+</AnchorPane>
